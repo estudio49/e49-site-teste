@@ -594,16 +594,6 @@ main > section, .footer { position: relative; z-index: 1; }
 /* social media e anúncios: cartão na home, planos e "quem paga o quê" */
 .hs-sm { background: var(--e49-serra); color: var(--e49-nata); --rot: 1.2deg; --dy: 20px; }
 .hs-sm p { color: var(--on-band-muted); }
-.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: stretch; }
-.plan { display: flex; flex-direction: column; gap: 14px; padding: clamp(24px, 2.4vw, 32px); border-radius: var(--e49-raio); background: var(--surface); }
-.plan h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.15; font-weight: 700; }
-.plan .for { margin: 0; color: var(--muted); }
-.plan .plain-list { margin: 6px 0 12px; }
-.plan .btn { margin-top: auto; align-self: flex-start; }
-.plan-hi { background: var(--e49-serra); color: var(--e49-nata); }
-.plan-hi .for { color: var(--on-band-muted); }
-.plan-hi .plain-list .ic { color: var(--e49-brasa); }
-@media (max-width: 899px) { .plans { grid-template-columns: 1fr; } }
 .pay { display: grid; gap: 0; }
 .pay-line { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; padding: 20px 0; border-top: 1px solid var(--line); }
 .pay-line:last-child { border-bottom: 1px solid var(--line); }
