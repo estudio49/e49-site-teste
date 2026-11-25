@@ -603,3 +603,24 @@ main > section, .footer { position: relative; z-index: 1; }
 .pay-line p { flex: 1 1 100%; margin: 4px 0 0; color: var(--muted); }
 /* no celular a faixa laranja passa por trás do texto da abertura: texto em Serra para manter o contraste AA */
 @media (max-width: 899px) { .page-hero .lead { color: var(--fg); } }
+
+/* vitrine de serviços: lista normal, sem prender a rolagem e sem precisar arrastar de lado */
+.hs { height: auto; view-timeline: none; }
+.hs-sticky { position: static; height: auto; overflow: visible; container-type: normal; display: block; padding: clamp(40px, 6vw, 96px) 0; }
+.hs-head { margin-bottom: clamp(24px, 3vw, 40px); }
+.hs-head .lead { display: block; }
+.hs-track { display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(16px, 2vw, 28px); width: auto; overflow: visible; animation: none; transform: none; scroll-snap-type: none; padding: 28px max(var(--gutter), calc((100% - var(--maxw)) / 2 + var(--gutter))); }
+.hs-card, .hs-1 { width: auto; min-height: clamp(360px, 38vw, 460px); grid-column: span 2; }
+.hs-card:nth-child(n+4) { grid-column: span 3; }
+.hs-card .art { display: flex; }
+@media (max-width: 899px) {
+  .hs-track { grid-template-columns: repeat(2, 1fr); }
+  .hs-card, .hs-1, .hs-card:nth-child(n+4) { grid-column: span 1; }
+  .hs-card:last-child { grid-column: span 2; }
+}
+@media (max-width: 599px) {
+  .hs-track { grid-template-columns: 1fr; }
+  .hs-card:last-child { grid-column: span 1; }
+  .hs-card, .hs-1 { min-height: 0; }
+  .hs-card .art { display: none; }
+}
